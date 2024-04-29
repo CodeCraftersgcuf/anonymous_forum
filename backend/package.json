@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "config": "^3.3.9",
+    "connect-mongo": "^5.0.0",
+    "connect-mongodb-session": "^3.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.1.1",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=14.20.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
