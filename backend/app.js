@@ -3,13 +3,26 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./utils/connectDB");
 
+const app = express();
+
+
+//Cros
+const allowedOrigin = "http://localhost:3000"; // Replace with your frontend URL
+app.use(
+  cors({
+    origin: allowedOrigin,
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  })
+);
+
+
 
 // Routers
 const boardRouter = require("./routes/board.route");
 const replyRouter = require("./routes/reply.route");
 const threadRouter = require("./routes/thread.route");
 
-const app = express();
+
 
 
 // 1. Body parser
