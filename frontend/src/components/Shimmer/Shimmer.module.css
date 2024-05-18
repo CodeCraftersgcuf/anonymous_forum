@@ -1,0 +1,20 @@
+@keyframes shimmerAnimation {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background-color: #e0e0e0;
+  background-image: linear-gradient(
+    90deg,
+    #e0e0e0,
+    #f0f0f0,
+    #e0e0e0
+  ); /* Replace with your desired color */
+  background-size: 200% 100%;
+  animation: shimmerAnimation 1.5s infinite;
+}

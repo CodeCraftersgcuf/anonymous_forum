@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --secondary: #fafafa;
+  --bluish: #8ecef8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #317fb6;
+  border-radius: 12px;
+  width: 10px;
+  height: 5px;
+}
+
+body {
+  margin: 0;
+  /* padding: 20px; */
+  font-family: "Poppins";
+  background: white;
+}
+
+/* navbar */
+/* header nav {
+  display: flex;
+  gap: 12rem;
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+/* header nav h1 {
+  border-bottom: 3px solid #317fb6;
+}
+
+header nav a {
+  text-decoration: none;
+  background-color: #dbd5d5;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  background: #317fb6;
+  color: white;
+} */
+
+/* boards list */
+/* .boards > a {
+  display: block;
+  max-width: 40rem;
+  background: rgba(190, 185, 185, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-decoration: none;
+} */
+
+/* .boards > a:hover p {
+  color: var(--bluish);
+}
+.boards p {
+  margin: 0;
+} */
+
+/* .ql-editor {
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+} */
+
+.ql-editor {
+  height: 10rem;
+}
+
+.ql-toolbar {
+  border-radius: 10px 10px 0 0;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  max-width: 1200px;
+}
+.breadcrumbs > * {
+  display: inline-block;
+  margin-right: 10px;
+}
+.breadcrumbs .crumb:after {
+  content: ">";
+  margin-left: 10px;
+}
+.breadcrumbs .crumb:last-child:after {
+  display: none;
+}
+.breadcrumbs .crumb a {
+  color: #317fb6;
+}
