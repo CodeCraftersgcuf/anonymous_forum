@@ -1,0 +1,14 @@
+{
+  "name": "full-stack-project",
+  "version": "1.0.0",
+  "description": "Full Stack Project",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "start": "npm run install:backend && npm run install:frontend && npm start",
+    "deploy": "npm run install:backend && npm run install:frontend && npm run build"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
