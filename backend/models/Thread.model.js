@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require ("mongoose");
 const { v4: uuidv4 } = require("uuid");
 const { replySchema } = require("./Reply.model");
 
@@ -41,6 +41,10 @@ const threadSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  videoUrl: {
+    type: String,
+    required: false,
+  }
 });
 
 // Pre-save middleware to generate threadNumber based on counter and random component

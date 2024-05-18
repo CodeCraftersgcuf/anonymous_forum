@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-
-// mongodb+srv://<username>:<password>@cluster0.ssslp.mongodb.net/?retryWrites=true&w=majority
-
-const dbUrl = "mongodb://127.0.0.1:27017/test2";
+require("dotenv");
+//const dbUrl = "mongodb://127.0.0.1:27017/anonymous";
+const dbUrl =process.env.URL;
 
 const connectDB = async () => {
   try {
@@ -10,7 +9,7 @@ const connectDB = async () => {
     console.log("Database connected...");
   } catch (error) {
     console.log(error.message);
-    setTimeout(connectDB, 5000);
+    setTimeout(connectDB, 2000);
   }
 };
 //connectDB();

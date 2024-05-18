@@ -25,9 +25,9 @@ module.exports.createReplyHandler = async (req, res, next) => {
       thread.save();
     }
 
-    console.log(thread);
+    //console.log(thread);
     const threadId = thread._id;
-    console.log(threadId);
+    //console.log(threadId);
     const reply = await createReply({
       threadId,
       parentReplyId: parentReplyId,

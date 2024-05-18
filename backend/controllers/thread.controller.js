@@ -20,7 +20,7 @@ module.exports.getAllThreadsContoller = async (req, res, next) => {
 
 module.exports.createThreadController = async (req, res, next) => {
   try {
-    const { boardName, subject, user, content } = req.body;
+    const { boardName, subject, user, content ,videoUrl} = req.body;
     let tagsArray = req.body?.tags || [];
     if (tagsArray.length > 0) {
       tagsArray = tagsArray.map((e) => {
@@ -28,15 +28,15 @@ module.exports.createThreadController = async (req, res, next) => {
       });
     }
     const userIP = req.ip;
-    console.log(userIP);
+    //console.log(userIP);
     const board = await Board.findOne({ name: boardName });
     if (board) {
       board.threadCount = (board?.threadCount || 0) + 1;
       board.save();
     }
-    console.log(board);
+   // console.log(board);
     const boardId = board._id;
-    console.log(boardId);
+ //   console.log(boardId);
     const thread = await createThread({
       boardId,
       subject,
@@ -44,6 +44,7 @@ module.exports.createThreadController = async (req, res, next) => {
       userIP,
       tags: tagsArray,
       content,
+      videoUrl,
     });
 
     res.status(201).json({
