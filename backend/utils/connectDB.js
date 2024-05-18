@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv");
 //const dbUrl = "mongodb://127.0.0.1:27017/anonymous";
-const dbUrl =process.env.URL;
+const dbUrl = process.env.MONGO_URL;
 
 const connectDB = async () => {
   try {
