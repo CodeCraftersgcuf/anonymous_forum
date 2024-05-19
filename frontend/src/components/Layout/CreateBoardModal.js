@@ -60,7 +60,7 @@ const CreateBoardModal = ({ closeModal }) => {
             } else if (!values.description) {
               errors.description = "Short Board description is required";
             } else if (!values.tags) {
-              errors.tags = "At least one tag is required";
+              errors.tags = "At least Add one Category";
             }
 
             return errors;
