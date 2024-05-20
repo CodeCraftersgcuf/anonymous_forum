@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "build": "npm run build"
   },
   "dependencies": {
     "config": "^3.3.9",
