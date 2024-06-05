@@ -1,6 +1,6 @@
 import { fetchBaseQuery } from "@reduxjs/toolkit/dist/query";
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 const baseQuery = fetchBaseQuery({
   baseUrl: `${BASE_URL}/api`,
